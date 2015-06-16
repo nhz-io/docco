@@ -249,9 +249,9 @@ is only copied for the latter.
       else
         dir = config.layout = path.join __dirname, 'resources', config.layout
         config.public       = path.join dir, 'public' if fs.existsSync path.join dir, 'public'
-        config.template     = path.join dir, 'docco.jst'
+        config.template     = path.join dir, 'docco.jade'
         config.css          = options.css or path.join dir, 'docco.css'
-      config.template = _.template fs.readFileSync(config.template).toString()
+      config.template = jade.compileFile config.template, pretty:true        
 
       if options.marked
         config.marked = JSON.parse fs.readFileSync(options.marked)
@@ -276,6 +276,7 @@ Require our external dependencies.
     marked      = require 'marked'
     commander   = require 'commander'
     highlightjs = require 'highlight.js'
+    jade        = require 'jade'
 
 Languages are stored in JSON in the file `resources/languages.json`.
 Each item maps the file extension to the name of the language and the
