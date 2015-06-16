@@ -43,7 +43,12 @@ body {
 #container { min-height: 100%; }
 
 a {
-  color: #000;
+  color: #0095DD;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 b, strong {
