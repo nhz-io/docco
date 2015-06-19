@@ -43,7 +43,12 @@ body {
 #container { min-height: 100%; }
 
 a {
-  color: #000;
+  color: #0095DD;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 b, strong {
@@ -68,12 +73,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1em;
   font-weight: normal;
   font-family: "roboto-black";
-  text-transform: uppercase;
+  text-transform: none;
   margin: 30px 0 15px 0;
 }
 
 h1 {
   margin-top: 40px;
+}
+
+h1 {
+  font-size: 3.5em;
 }
 h2 {
   font-size: 1.26em;
@@ -227,10 +236,10 @@ ul.sections > li > div {
   ul.sections > li > div.content {
     overflow-x:auto;
     -webkit-box-shadow: inset 0 0 5px #e5e5ee;
-    box-shadow: inset 0 0 5px #e5e5ee;
-    border: 1px solid #dedede;
+    box-shadow: inset 0 0 5px #e5e5ee;      
     margin:5px 10px 5px 10px;
     padding-bottom: 5px;
+    background: none repeat scroll 0% 0% #DDE4E9;       
   }
 
   ul.sections > li > div.annotation pre {
@@ -325,7 +334,7 @@ ul.sections > li > div {
   ul.sections > li > div.content {
     padding: 13px;
     vertical-align: top;
-    border: none;
+    border-left: 6px solid #558ABB;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
@@ -366,11 +375,11 @@ ul.sections > li > div {
   }
 
   #background {
-    width: 525px;
+    width: 800px;
   }
   ul.sections > li > div.annotation {
-    max-width: 525px;
-    min-width: 525px;
+    max-width: 800px;
+    min-width: 800px;
     padding: 10px 25px 1px 50px;
   }
   ul.sections > li > div.content {
